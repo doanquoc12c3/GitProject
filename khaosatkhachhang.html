@@ -5,62 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            border-spacing: 0;
+        }
+    </style>
 </head>
 <body>
     <h3>Market Research Survey</h3>
     <p>Please take a few moments to complete this satisfaction survey</p>
-    <h6>What is your age range</h6>
-    <input type="range" min=18 max =24>
-    <h6>What is your yearly income</h6>
-    <input type="text">
-    <h6>Gender Identity</h6>
-    <input type="checkbox"> Male
-    <input type="checkbox"> Female
-    <input type="checkbox"> Nonbinary
-    <input type="checkbox"> Other
+    <h4>What is your age range</h4>
+    <select name="" id="">
+        <option value="">18</option>
+        <option value="">19</option>
+        <option value="">20</option>
+        <option value="">21</option>
+        <option value="">22</option>
+        <option value="">23</option>
+        <option value="">24</option>
+        
+    </select>
+    <h4>What is your yearly income</h4>
+    <select name="" id="">
+        <option value="">$0 - $25000</option>
+        <option value="">$25000 - $50000</option>
+    </select>
+
+    <h4>Gender Identity</h4>
+    <input type="checkbox"> Male <br>
+    <input type="checkbox"> Female <br>
+    <input type="checkbox"> Nonbinary <br>
+    <input type="checkbox"> Other <br>
     <input type="textbox">
-    <h6>Which of following producst have your purchased in the last 2 months. Please check all that apply</h6>
-    <input type="checkbox"> Product 1
-    <input type="checkbox"> Product 2
-    <input type="checkbox"> Product 3
-    <h6>How often would you use our new product</h6>
-    <input type="checkbox"> Daily
-    <input type="checkbox"> Weekly
-    <input type="checkbox"> Monthly
-    <h6>What would you pay for the new product</h6>
-    $  <input type="checkbox"> . <input type="checkbox">
-    <h6>What features would you like to see in the new product.</h6>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <h6>Please rate your level of agreement with the following statements</h6>
+    <h4>Which of following producst have your purchased in the last 2 months. Please check all that apply</h4>
+    <input type="checkbox"> Product 1 <br>
+    <input type="checkbox"> Product 2 <br>
+    <input type="checkbox"> Product 3 <br>
+    <h4>How often would you use our new product</h4>
+    <input type="checkbox"> Daily <br>
+    <input type="checkbox"> Weekly <br>
+    <input type="checkbox"> Monthly <br>
+    <h4>What would you pay for the new product</h4>
     <table>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+        <tr>
+            <td >$  <input type="number" ></td>
+            <td>. <input type="number"></td>
+        </tr>
+        <tr>
+            <td>Dollars</td>
+            <td>cents</td>
+        </tr>
+    </table>
+     
+    <h4>What features would you like to see in the new product.</h4>
+    <textarea name="" id="" cols="100%" rows="10"></textarea>
+    <h4>Please rate your level of agreement with the following statements</h4>
+    <table border="1" >
+        <tr style =" background-color: gray;">
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly agreement</th>
+        </tr>
+        <tr>
+            <td>Our products are priced fairly  </td>       
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Our products are high quality</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>You would recommend our product to a friend or coworker</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td colspan="5"><input type="submit"></td>
+            
+        </tr>
 </table>
 </body>
 </html>
