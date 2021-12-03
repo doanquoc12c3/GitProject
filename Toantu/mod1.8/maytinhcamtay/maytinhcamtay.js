@@ -25,3 +25,6 @@ function multiplication(){
     var c = a*b
     document.getElementById('result').innerHTML = "Result: "+ c
 }
+
+
+}
