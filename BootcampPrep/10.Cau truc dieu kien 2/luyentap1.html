@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onlick='bai1'>Bai 1</button>
+    <br>
+    <button onlick='bai2'>Bai 2</button>
+    <br>
+    <button onlick='bai3'>Bai 3</button>
+    <br>
+    <button onlick='bai4'>Bai 4</button>
+    <br>
+    <button onlick='bai5'>Bai 5</button>
+    <br>
+    <button onlick='bai6'>Bai 6</button>
+    <br>
+    <button onlick='bai7'>Bai 7</button>
+    
+    <script>
+        function bai1(){
+            var a = prompt('nhap vao so thu nhat a');
+        var b = prompt('nhap vao so thu hai');
+        if(a%b===0){
+            alert("a chia het b")
+        } else{
+            alert("a khong chia het cho b")
+        }
+
+        }
+
+        function bai2(){
+            var a = prompt('nhap vao tuoi cua ban')
+            if(a<15){
+                alert('chua du tuoi yeu cau de vao lop 10')
+            } else {
+                alert('Chuc mung ban da du tuoi yeu cau de len lop 10')
+            }
+        }
+
+        function bai3(){
+            var a = prompt("nhap vao so nguyen bat ki de kiem tra")
+            if(a>0){
+                alert('day la so nguyen duong')
+            } else{
+                alert('day khong phai la so duong')
+            }
+        }
+        
+        function bai4(){
+            var a = prompt('nhap vao so thu nhat')
+            var b = prompt('nhap vao so thu hai')
+            var c = prompt('nhap vao so thu ba')
+            if (a>b){
+                if (a>c){
+                    alert('a la so lon nhat trong 3 so')
+                } else{
+                    alert('c la so lon nhat trong 3 so')
+                }
+            } else {
+                if (b>c){
+                    alert('b la so lon nhat trong 3 so')
+                } else{
+                    alert('c la so lon nhat trong 3 so')
+                }
+            }
+        }
+
+        function bai5(){
+            var a = prompt('nhap diem giua ki')
+            var b = prompt('nhap diem cuoi ki')
+            var c = (a*3 + b*7)/10
+            if(c<5){
+                alert('Hoc luc tuong ung la A')
+            } else if( c > 5 && c < 8){
+                alert('Hoc luc tuong ung la B')
+            } else {
+                alert('Hoc luc tuong ung la C')
+            }
+        }
+         function bai6(){
+             var a = prompt('doanh so cua ban')
+             var b = a*1000000
+             alert('doanh so tuong ung cua ban la ' + b)
+         }
+
+         function bai7(){
+             var a = prompt('cuoc dien thoai cua ban la')
+             var b = a * 2000 
+             alert('Thanh tien '+ b)
+         }
+
+
+    </script>
+</body>
+</html>
