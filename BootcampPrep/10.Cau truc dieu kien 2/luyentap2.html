@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick='bai1()'>Bai1</button>
+    <button onclick="bai2()">bai2</button>
+    <button onclick="bai3()">bai3</button>
+    <button onclick="bai4()">Bai4</button>
+    <button onclick="bai5()">Bai5</button>
+    <button onclick="bai6()">Bai6</button>
+    <button onclick="bai7()">bai7</button>
+    <button onclick="bai8()">bai8</button>
+    <button onclick="bai9()">bai9</button>
+    <button onclick="bai10()">bai10</button>
+    <button onclick="bai11()">Bai11</button>
+    <button onclick="bai12()">bai12</button>
+
+    <script>
+        function bai1(){
+            var a = prompt('nhap vao do C muon chuyen sang do F')
+            var b = a * 9/5 + 32;
+            alert('Do F tuong ung la '+ b)
+        }
+
+        function bai2(){
+            var met = prompt('nhap vao don vi met muon chuyen sang feet ')
+            var feet = met * 3.2808
+            alert('So feet tuong ung la '+ feet)
+        }
+
+        function bai4(){
+            var chieuDai= prompt('nhap vao chieu dai cua hinh chu nhat')
+            var chieuRong = prompt('nhap vao chieu rong cua hinh chu nhat')
+            var dienTich = chieuDai*chieuRong;
+            alert('Dien tich cua hinh chu nhat la ' + dienTich)
+        }
+
+        function bai3(){
+            var canhHinhVuong = prompt('nhap vao do dai canh cua hinh vuong')
+            var dienTich = canhHinhVuong*canhHinhVuong;
+            alert('Dien tich cua hinh vuong la +' + dienTich)
+        }
+
+        function bai5(){
+            var canh1= prompt('Do dai canh tam gia vuong thu 1')
+            var canh2 = prompt('Do dai canh tam giac vuong thu 2')
+            var dienTich = canh1*canh2
+            alert('Dien tich cua hinh vuong la '+ dienTich)
+        }
+
+        function bai6(){
+            var a = prompt('nhap vao gia tri cua a trong phuong trinh ax +b = 0')
+            var b = prompt('nhap vao gia tri cua b trong phuong trinh ax +b = 0')
+            var x = -b/a;
+            alert('gia tri x la ' + x)
+        }
+
+        function bai7(){
+            var a = prompt('nhap vao gia tri cua a trong phuong trinh bac 2 ax2 + bx + c')
+            var b = prompt('nhap vao gia tri cua b trong phuong trinh bac 2 ax2 + bx + c')
+            var delta = b*b - 4 * a * c;
+            var nghiem1= (-b + Math.sqrt(delta)/(2*a))
+            var nghiem2 = (-b - Math.sqrt(delta)/(2*a))
+            alert('nghiem thu nhat la + ' + nghiem1 + "&& nghiem thu hai la " + nghiem2s )
+        }
+
+        function bai8(){
+            var a = prompt('nhap vao so nguyen de xem tuoi hop le')
+            if(a === parseInt(a)){
+                if(a > 0 && a < 120){
+                    alert('Day la so tuoi hop le')
+                }else( 
+                    alert('Day khong phai la so tuoi hop le')
+                )
+            } else (
+                alert('Ban can nhap so nguyen')
+            )
+        }
+        
+        function bai9(){
+            var a = prompt('nhap vao gia tri a')
+            var b = prompt('nhap vao gia tri b')
+            var c = prompt('nhap vao gia tri c')
+            if( a > 0 && b > 0 && c >0){
+                if ( a + b > c && b + c > a && c + a > b){
+                    alert('Day la 3 canh cua 1 tam giac')
+                } else (
+                    alert('Day khong phai la 3 canh cua 1 tam giac')
+                )
+            } else(
+                alert('Day khong phai la 3 canh cua 1 tam giac ')
+            )
+        }
+
+        function bai10(){
+            var soDien = prompt('nhap vao so dien de tinh gia dien')
+            var giaDien = soDien*4000
+            alert('gia dien la ' + giaDien)
+        }
+
+        function bai11(){
+            var thuNhap = prompt('nhap vao thu nhap cua ban')
+            var thue = thuNhap*10/100
+            thue = prompt('thua thu nhap ca nhan cua ban la '+ thue)
+        }
+
+        function bai12(){
+            var a = prompt(' so tien ban dau cua ban muon gui')
+            var laisuat = parseFloat(prompt('lai suat hang thang'))
+            var c = prompt('so thang ban muon gui')
+            // var power = Math.pow((1+ b),c)
+            var laikep =a*(Math.pow((1+laisuat),c))
+            alert('Lai cua ban sau '+ c+' thang la '+ laikep)
+            // alert(laisuat)
+            
+        }
+    </script>
+</body>
+</html>
