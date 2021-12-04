@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Do you love me?</h3>
+            <button i ='yes' onclick="noti()" >Yes</button>
+            <button id='no' onmouseover="move()" style = 'left:0px; top:0px; position: relative'>No</button>
+    <script>
+        function noti(){
+            alert('you should be, okay!');
+
+        }
+        function move(){
+            var move = document.getElementById('no');
+            var a = parseInt(Math.random()*500);
+            var b = parseInt(Math.random()*500);
+       
+            move.style.left =  b + 'px';
+            move.style.top =  a  + 'px';
+            if(c> 300){
+                c= 200;
+            } else if( d > 300) {
+                d=d - 150;    
+            }
+        }
+    </script>
+</body>
+</html>
