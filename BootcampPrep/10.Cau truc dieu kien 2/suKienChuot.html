@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <img src="girl.png" id="girl" alt="">
+        <p>Click to move the girl to the right!</p>
+        <button type='button' onclick="move()" id='click'>Click </button>
+    </form>
+    <script>
+        function init(){
+            var girl = document.getElementById('girl');
+            girl.style.position = 'relative';
+            girl.style.height = 200 +'px';
+            girl.style.left = 0 + 'px';
+        }
+        function move(){
+            girl.style.left = parseInt(girl.style.left) +10 + 'px';
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
