@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function baitap(){
+            var numbers = prompt('so luong so nguyen to ma ban muon in ra man hinh');
+            var countPrimeNumber = 0;
+            var checkPrimeNumber = 1;
+            var presentNumber =2;
+            var i = 0;
+            while(countPrimeNumber<numbers){
+                i=0;
+                checkPrimeNumber = 1;
+                while(presentNumber>checkPrimeNumber){
+                    if(presentNumber%checkPrimeNumber==0){
+                        i = i + 1;
+                        checkPrimeNumber++;   
+                    }else{
+                        checkPrimeNumber++;
+                    }
+                }
+                if(i==1){
+                    alert(numbers+ "so nguyen to dau tien lan luot la "+ presentNumber)
+                    presentNumber++;
+                    countPrimeNumber++;
+                }else{
+                    presentNumber++
+                }
+                
+                
+            }
+        }
+    </script>
+</body>
+</html>
