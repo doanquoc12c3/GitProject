@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function baitap(){
+            var khung = "<table border='1' cellspacing='0' cellpadding='3'>";
+            for(i=1;i<10;i++){
+                khung = khung + '<tr>';
+                    for(j=2;j<10;j++){
+                        khung = khung + '<td>';
+                        var tich = i*j
+                        var value = i+"x"+ j + "=" + tich;
+                        khung = khung + value + '</td>';
+                    }
+                khung = khung + '</tr>';
+            }
+            khung = khung + "</table>";
+            document.write(khung)
+        }
+    </script>
+</body>
+</html>
