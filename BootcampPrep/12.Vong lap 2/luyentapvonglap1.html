@@ -43,6 +43,31 @@
                 i+=1;
                 }
             }
+
+            function bai4(){
+                var firstNumber = 0;
+                var sofibo1=0;
+                var sofibo2=1;
+                var sofibo3=0;
+                numbers=0;
+                while(numbers<1){
+                
+                sofibo3 = sofibo1 + sofibo2;
+                sofibo1 = sofibo2 + sofibo3;
+                sofibo2 = sofibo3 + sofibo1;
+                if(sofibo3%5==0){
+                    alert('day la so chia het cho 5 va gia tri cua no la ' + sofibo3)
+                    numbers=numbers+1;
+                }else if(sofibo1%5==0){
+                    alert('day la so chia het cho 5 va gia tri cua no la ' + sofibo1)
+                    numbers=numbers+1;
+                }else if(sofibo2%5==0){
+                    alert('day la so chia het cho 5 va gia tri cua no la ' + sofibo2)
+                    numbers=numbers+1;
+                }
+                }
+                
+            }
         </script>
     </body>
     </html>
