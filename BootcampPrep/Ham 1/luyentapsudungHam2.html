@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // bai 1
+        function bai1(){
+            var a = prompt('nhap vao so muon tinh binh phuong');
+            var b = a*a;
+            return b;
+        }
+
+        bai1(5)
+
+        // bai 2
+        function dientich(bankinh){
+            var bankinh = prompt('nhap vao ban kinh cua duong tron');
+            var dientich = bankinh*bankinh*3.14;
+        }
+        
+        function chuvi(bankinh){
+            var bankinh = prompt('nhap vao ban kinh cua duong tron');
+            var chuvi = 2*bankinh*3.14;
+        }
+        dientich(5);
+        chuvi(6);
+
+        // bai 3
+        function giaiThua(a){
+            var a = prompt('nhap vao so tu nhien muon tinh giai thua');
+            
+            for(i=1;i<=a;i++){
+                a = a*i;
+            }
+            return a;
+        }
+
+        giaiThua(5);
+
+        // bai 4
+        function isNumber(){
+            var a = prompt('kiem tra ky tu so');
+            if(typeof a == 'number'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        // bai 5
+        function min(){
+            var a1 = prompt('nhap vao so thu nhat')
+            var a2 = prompt('nhap vao so thu hai')
+            var a3 = prompt('nhap vao so thu ba')
+            if(a1>a2 && a1>a3){
+                return a1
+            } else if(a2>a3 && a2>a3){
+                return a1
+            } else if(a3>a2 && a3>a1){
+                return a1
+            }
+            
+        }
+
+        // bai 6
+        function isNguyenDuong(){
+            var a1 = prompt('nhap vao so bat ki de kiem tra');
+            if(a1%1==0 &&a1>0){
+                return true;
+            } else{
+                return false;
+            }
+
+        // bai 7
+        function exchange(a,b){
+            var a = prompt('nhap vao so nguyen 1')
+            var b = prompt('nhap vao so nguyen 2')
+            var c = a;
+            a=b;
+            b=c;
+        }
+
+        // bai 8
+        function reverse(){
+            var a = prompt('nhap vao mang so nguyen bat ki')
+            a = a.split(',');
+            a = a.reverse()
+            return a;
+        }
+
+        // bai 9
+
+        function kiemTraKyTuTrongMang(){
+            var a = prompt('nhap vao mot so bat ki')
+            var b = prompt('nhap vao mang bat ki');
+            var c =0;
+            b=b.split(',')
+            for(i=0;i<b.length;i++){
+                if(a==b[i]){
+                    c=c+1;
+                }
+            }
+            if(c==0){
+                return -1;
+            }
+        }
+    </script>
+</body>
+</html>
