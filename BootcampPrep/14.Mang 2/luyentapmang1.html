@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+
 <script>
     function bai1() {
         var a = prompt('nhap vao day gom 10 so');
@@ -21,7 +22,7 @@
         var a = prompt("nhap vao 1 mang gom cac so bat ki");
         let b = a.split(',')
 
-        let max =0;
+        let max =b[0];
         console.log(b)
         for(let i=0; i<b.length;i++){
             if(max<parseInt(b[i])){
@@ -71,8 +72,70 @@
         console.log(a)
         document.write('day moi duoc dao nguoc la '+ a);
     }
-</script>
 
+    function bai5(){
+        var a = prompt('nhap vao day so bat ki')
+        a = a.split(',');
+        var b= new Array();
+        for(i=0;i<a.length;i++){
+            if(a[i]<0){
+                b.push(a[i]);
+            }
+        }
+
+        document.write('so am trong day la cac so '+ b)
+    }
+
+    function  bai6(){
+        var a =[1,2,3,4,5,6,7,8,8,9]
+        var b = prompt('nhap vao so nguyen bat ki de kiem tra')
+        var c= 0;
+        for(let i=0;i<a.length;i++){
+            if(b==a[i]){
+                c=c+1;
+            }
+        }
+        if(c>0){
+            alert('so ban vua nhap co trong day')
+        }else if(c==0){
+            alert("so ban vua nhap khong co trong day")
+        }
+    }
+    function bai7(){
+        var a =[1,2,3,4,5,6,7,8,8,9]
+        var b = prompt('nhap vao so nguyen bat ki de kiem tra')
+        var c = 0;
+        for(let i=0;i<a.length;i++){
+            if(b==a[i]){
+                a.splice(i,1)
+
+            }
+        }
+        a.push(0)
+        document.write('mang moi cua day la '+ a)
+    }
+
+    function bai8(){
+        var x = prompt('nhap vao 1 mang so nguyen gom 10 phan tu')
+        var y=x.split(',');
+        y=y.sort(function(a, b){return a - b})
+        y=y.reverse();
+        document.write(y)
+    }
+    function bai9(){
+        var a = prompt('nhap vao mang gom 10 phan tu')
+        var b = prompt('nhap vao mang gom 10 phan tu')
+        var c = new Array(20)
+        a=a.split(',');
+        b=b.split(',');
+        a=a.concat(b)
+        for(i=0;i<a.length;i++){
+            c.splice(i,1,a[i])
+        }
+        document.write("mang moi cua ban la "+c)
+    }
+</script>
+<table>tr*</table>
 
 </body>
 </html>
