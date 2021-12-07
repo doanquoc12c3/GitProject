@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="word">
+    <button id="send" onclick="dich()">Send</button>
+    <script>
+        function dich(){
+            let tiengViet = ['xin chao','thu 2', 'thu 3', 'thu 4', 'thu 5','thu 6', 'thu 7', 'chu nhat'];
+            let tiengAnh = ['hi', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'Saturday','sunday'];
+            var input = document.getElementById('word').value;
+            for(i=0;i<tiengAnh.length;i++){
+               if(input === tiengAnh[i]) {
+                   alert("nghia cua tu nay la " + tiengViet[i])
+               } else if (input === tiengViet[i]){
+                   alert('nghia cua tu ngay la '+ tiengAnh[i])
+               }
+            }
+            // while(input!)
+            // for(i=0;i<tiengAnh.length;i++){
+            //     if (input !== tiengAnh[i]){
+            //         alert('khong co tu nay trong tu dien cua toi')
+            //     } else if( input !== tiengViet[i]){
+            //         alert('khong co tu nay trong tu dien cua toi')}
+            // }
+
+
+        }
+    </script>
+</form>
+</body>
+</html>
