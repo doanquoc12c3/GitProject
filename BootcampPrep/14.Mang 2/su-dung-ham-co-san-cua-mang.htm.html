@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function bai1(){
+        let myColor = ['red','green','black','white'];
+        let string = "";
+        myColor.forEach(function(item){
+            string=string + item + ",";
+        })
+
+        document.write(string)
+    }
+    function bai2(){
+        let a = prompt('nhap vao mot so tu nhien bat ki')
+        let b = a.toString();
+        let c = [b[0]];
+        for(i=1;i<b.length;i++){
+            if(b[i-1]%2===0){
+                c.push('-'+
+                    b[i])
+            } else{
+                c.push(b[i])
+            }
+        }
+        c=c.join("")
+        document.write(c)
+    }
+</script>
+</body>
+</html>
