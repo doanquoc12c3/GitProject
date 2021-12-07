@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bai1(){
+            alert('xin chao')
+        }
+
+        function bai2(){
+            var a = prompt('nhap vao mot bat ki');
+            a = a + 1;
+            document.write("gia tri da duoc cong them 1 "+ a)
+
+        }
+
+        function bai3(){
+            var a = prompt('nhap vao gia tri thu nhat');
+            var b = prompt('nhap vao gia tri thu hai');
+            if(a>b){
+                alert('so thu nhat lon hon so thu hai')
+            } else{
+                var c = a + b;
+                alert('tong cua hai so la' + c)
+            }
+        }
+// BAI 4
+        function addNumbers() {
+                firstNum = 4;
+                secondNum = 8;
+                result = firstNum + secondNum;
+                return result;
+            }
+            result = 0;
+            alert('gia tri cua result la '+ result)
+            result = addNumbers(); 
+            alert('gia tri cua result la '+result)
+
+            function bai5(){
+                var a = prompt('nhap vao chuoi ky tu de kiem tra Chom sao');
+                var b = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+                var c = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"]
+                for(i=0;i<b.length;i++){
+                    if(a==b[i]){
+                        var d = c[i]
+                        alert('chom sao tuong ung la '+d );
+                        return d;
+                    }
+                }
+            }
+    </script>
+</body>
+</html>
