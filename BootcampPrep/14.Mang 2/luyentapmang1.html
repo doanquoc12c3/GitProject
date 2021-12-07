@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function bai1() {
+        var a = prompt('nhap vao day gom 10 so');
+        var b = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] > 0) {
+                b = b + 1;
+            }
+        }
+        document.write("<p>Co " + b + " so lon hon 0 </p>")
+    }
+
+    function bai2(){
+        var a = prompt("nhap vao 1 mang gom cac so bat ki");
+        let b = a.split(',')
+
+        let max =0;
+        console.log(b)
+        for(let i=0; i<b.length;i++){
+            if(max<parseInt(b[i])){
+                max=parseInt(b[i])
+                c = i+1;
+            }
+        }
+
+        document.write('gia tri lon nhat trong day la '+ max + "va vi tri cua no la " + c)
+    }
+
+    function bai3(){
+        var a = prompt("nhap vao 1 mang gom cac so bat ki");
+        let b = a.split(',')
+        let total = 0;
+        let max =0;
+        console.log(b)
+        for(let i=0; i<b.length;i++){
+            if(max<parseInt(b[i])){
+                max=parseInt(b[i]);
+            }
+            total = total + parseInt(b[i])
+        }
+        total = total/b.length
+
+        document.write('gia tri lon nhat trong day la '+ max + "gia tri trung binh cua mang la " + total)
+    }
+
+    function bai4(){
+        var a = prompt('nhap vao mang cac so nguyen');
+        a = a.split(',');
+        var d = new Array()
+        var j=a.length -1;
+        var i=0;
+        if(i<j){
+            c=a[i];
+            a[i]=a[j];
+            a[j] = c
+            d.push(a[i]);
+            i++;
+            j--;
+        }
+
+
+
+
+        console.log(a)
+        document.write('day moi duoc dao nguoc la '+ a);
+    }
+</script>
+
+
+</body>
+</html>

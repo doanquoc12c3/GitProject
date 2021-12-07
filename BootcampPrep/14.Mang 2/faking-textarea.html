@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<h4>Type anything and get fooled!!!</h4>
+<form action="" name="form">
+    <textarea name="txt" id="default" cols="100" rows="10"  onkeydown="typing()" ></textarea>
+</form>
+
+<script>
+    var n="";
+    var mang = new Array();
+    var chuoiTen ="Đừng để ai buông lời nặng nề với bạn nhé"
+    mang = chuoiTen.split('')
+
+    function typing(){
+        var t = document.form.txt.value;
+        var j = t.length;
+        if(j > 0)
+        {
+            for(var i=0; i<j; i++)
+            {
+                n = n + mang[i];
+                if(i == mang.length)
+                {
+                    document.form.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.form.txt.value = n;
+        n="";
+        setTimeout("typing()", 1);
+        //return false;
+    }
+</script>
 </body>
 </html>
