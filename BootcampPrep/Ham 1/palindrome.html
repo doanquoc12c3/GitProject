@@ -12,7 +12,6 @@
         const word = a.split("");
         var reversedWord = word.slice().reverse();
         let count = 0;
-        document.write("<br>"+ "gia tri word la "+ word +'<br>'+"gia tri reverse word la "+ reversedWord + "<br>")
         for(let i=0;i<a.length;i++){
             if(word[i]===reversedWord[i]) {
                 count = count + 1;
@@ -20,7 +19,7 @@
                 count =0;
             }
         }
-        document.write('so ' + count)
+        
         if(count === a.length){
             alert('day la so palindrome')
         } else {
