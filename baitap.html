@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // bai1
+    function isPrime() {
+
+        var x = prompt('nhap vao gia tri bat ki');
+        if (x == 1) {
+            alert('x khong phai la so nguyen to')
+        } else if (x % 1 == 0) {
+            var count = 0;
+            for (let i = 0; i < x; i++) {
+                if (x % i == 0) {
+                    count = count + 1;
+                }
+            }
+            if (count < 1) {
+                alert('x khong phai la so nguyen to')
+            } else {
+                alert('x la so nguyen to')
+            }
+
+        }
+    }
+// bai 2
+    function tong20soPrime(){
+            var count =0;
+            let soTuNhien =2;
+            var total = 0;
+            while(count<=19){
+
+                var chiahet=0;
+                for (let i =1; i < soTuNhien; i++) {
+                    if (soTuNhien % i === 0) {
+                        chiahet = chiahet + 1;
+
+                    }
+                }
+                if(chiahet===1) {
+                    count = count + 1;
+                    total = total + soTuNhien;
+                    alert('so nguyen to thu '+ count  + " la "+ soTuNhien )
+
+                }
+
+
+                soTuNhien++;
+            }
+            alert(total)
+    }
+
+    // bai 3
+    function soChinhPhuong(){
+        var a = prompt('nhap vao de kiem tra co phai so chinh phuong hay khong')
+        if(a<0){
+            alert('day la so am')
+        } else {
+            var sqrt = Math.sqrt(a);
+            if(sqrt%1==0){
+                alert('day la 1 so chinh phuong')
+            } else {
+                alert('day khong phai la so chinh phuong')
+            }
+        }
+
+    }
+
+    // bai 4
+    function tong100soChinhPhuong(){
+        var total = 1;
+        var count = 0;
+        var soTuNhien = 2;
+        while(count<=97){
+            var sqrt = Math.sqrt(soTuNhien)
+            if(sqrt%1===0){
+                count = count+1;
+                total = total + soTuNhien;
+            }
+            soTuNhien++;
+        }
+
+        alert('tong 100 so chinh phuong dau tien la '+ total)
+    }
+
+    // bai5
+
+    function ptBac2(){
+        var a = prompt('nhap vao gia tri a trong aX2 + bx + c = d')
+        var b = prompt('nhap vao gia tri b trong aX2 + bx + c = d')
+        var c = prompt('nhap vao gia tri c trong aX2 + bx + c = d')
+        var d = prompt('nhap vao gia tri d trong aX2 + bx + c = d')
+        var e = c-d;
+        var canDelta = Math.sqrt(b*b - 4*a*e)
+        var nghiem1=(-b + canDelta)/(2*a)
+        var nghiem2=(-b - canDelta)/(2*a)
+        if(a==0 && b==0){
+            alert('phuong trinh vo nghiem')
+        }
+        if(a==0){
+            var nghiem = (d-c)/b
+            alert('nghiem cua phuong trinh la '+ nghiem)
+        } else{
+            alert('nghiem thu nhat la '+ nghiem1+ "<br> nghiem thu hai la "+ nghiem2)
+        }
+    }
+
+    // bai 6
+    function totalOfSquare(){
+        var n = prompt("nhap vao so tu nhien de tinh tong tong binh phuong");
+        var total = 0;
+        if(n%1==0 && n>0){
+            for(i=0;i<=n;i++){
+                total = total + Math.pow(i,2);
+            }
+            alert('tong binh phuong cua tat ca cac so la '+total)
+        } else{
+            alert('moi ban nhap vao so nguyen duong')
+        }
+    }
+
+    // bai 7
+    function tinhTongPhanSo(){
+        var n = prompt('nhap vao gia tri n cua day 1 + 1/2 + ...+1/n')
+        var total =0;
+        if(n==0) {
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                total = total + 1/i;
+            }
+            alert('tong cua tat ca cac so la '+total)
+        }else {
+            alert('moi ban nhap vao so nguyen duong')
+        }
+    }
+
+    // bai 8
+    function tinhTongPhanSo2(){
+        var n = prompt('nhap vao gia tri n cua day 1 + 1/2 + ...+1/n')
+        var total =0;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                total = total + 1/(i*2);
+            }
+            alert('tong cua tat ca cac so la '+total)
+        }else {
+            alert('moi ban nhap vao so nguyen duong')
+        }
+    }
+
+    // bai 9
+    function tinhTongPhanSo3(){
+        var n = prompt('nhap vao gia tri n cua day 1 + 1/2 + ...+1/n')
+        var total =0;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                total = total + 1/(i*2+1);
+            }
+            alert('tong cua tat ca cac so la '+total)
+        }else {
+            alert('moi ban nhap vao so nguyen duong')
+        }
+    }
+
+    // bai 10
+    function tinhTongPhanSo4(){
+        var n = prompt('nhap vao gia tri n cua day 1 + 1/2 + ...+1/n')
+        var total =0;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                total = total + 1/(i*(i+1));
+            }
+            alert('tong cua tat ca cac so la '+total)
+        }else {
+            alert('moi ban nhap vao so nguyen duong')
+        }
+    }
+
+    // bai 11
+    function tinhTongPhanSo2(){
+        var n = prompt('nhap vao gia tri n cua day 1 + 1/2 + ...+1/n')
+        var total =0;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                total = total + i/(i+1);
+            }
+            alert('tong cua tat ca cac so la '+total)
+        }else {
+            alert('moi ban nhap vao so nguyen duong')
+        }
+    }
+
+    // bai 12
+    function giaiThua(){
+        var n = prompt("nhap vao gia tri n nguyen duong de tinh giai thua");
+        var total = 1;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                total =total*i;
+            }
+            alert('tich luy thua la '+ total)
+        }
+
+    }
+
+    // bai 13
+    function tinhTongLuyThua(){
+        var n = prompt("nhap vao gia tri n nguyen duong de tinh trond day x1+x2+x3 + ...+xN");
+        var x = prompt('nhap vao gia tri x')
+        var total = 0;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(let i=1;i<=n;i++){
+                total = total + Math.pow(x,i);
+            }
+            alert('tong cua day la '+ total)
+        }
+    }
+
+    // bai 14
+    function tinhTongLuyThua2(){
+        var n = prompt("nhap vao gia tri n nguyen duong de tinh tong cua day 1 + 1.2 + 1.2.3 +..+ 1.2.3.n");
+        var total = 0;
+        var tich =1;
+        if(n==0){
+            alert('n can nguyen duong va lon hon 0')
+        }else if(n%1==0 && n>0){
+            for(i=1;i<=n;i++){
+                tich = tich*i
+                total = total + tich;
+            }
+            alert('tong cua day la '+ total)
+        }
+    }
+</script>
+
+</body>
+</html>
