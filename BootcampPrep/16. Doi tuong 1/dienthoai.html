@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Mobile {
+    constructor(pin, mode, message, commingMessage,sendedMessage, mesBox){
+      this.message = message;
+      this.commingMessage = commingMessage;
+      this.sendedMessage = sendedMessage;
+      this.mode = mode;
+      this.pin = pin;
+      this.mesBox = mesBox;
+
+    }
+    checkMode(){
+      if(this.mode=='on'){
+        console.log('dien thoai dang bat')
+      } else if(this.mode = 'off'){
+        consolo.log('dien thoai dang tat')
+      }
+
+    }
+    turnOnOff(){
+        this.pin = this.pin -1;
+      if(this.mode=='on'){
+        this.mode = 'off'
+      } else if(this.mode == 'off'){
+        this.mode = 'on'
+      }
+    }
+
+    chargePhone(){
+        this.pin = this.pin -1;
+      if(pin!==100){
+        this.pin = this.pin ++;
+      } else{
+        console.log('dien thoai dang day')
+      }
+    }
+    createMessage(){
+        this.pin = this.pin -1;
+      this.message = 'new message'
+    }
+    receiveMessage(){
+        this.pin = this.pin -1;
+        this.commingMessage = "new mes from other device"
+    }
+    sendMessage(){
+        this.pin = this.pin -1;
+        this.sendedMessage = 'send new mes to other devices'
+    }
+    checkMessage(){
+        this.pin = this.pin -1;
+        for(i=0;i<this.mesBox;i++){
+            this.message = this.mesBox[i];
+        }
+    }
+    checkSendedMessage(){
+        this.pin = this.pin -1;
+          for(i=0;i<this.mesBox;i++){
+              this.message = this.mesBox[i];
+          }
+      }
+    batteryAmount(){
+        this.pin = this.pin -1;
+    }
+
+  }
+</script>
+</body>
+</html>
