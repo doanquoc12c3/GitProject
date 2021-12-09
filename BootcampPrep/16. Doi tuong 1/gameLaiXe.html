@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="viewport" width="700" height="600" style="border: 1px solid black"></canvas>
+<script>
+
+    class Car{
+        constructor(step,speedUp,direction,obstacle,) {
+        }
+    }
+    var canvas = document.getElementById('viewport')
+    var context = canvas.getContext('2d');
+
+    make_base();
+
+    function make_base()
+    {
+        base_image = new Image();
+        base_image.src = 'car.png';
+
+        base_image.onload = function(){
+            context.drawImage(base_image, 0, 0, 80,50);
+        }
+    }
+
+
+</script>
+</body>
+</html>
