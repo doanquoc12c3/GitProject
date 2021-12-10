@@ -23,21 +23,23 @@ function Human(name, sex, weightHuman){
         console.log(this.say = 'Hi, nice to meet '+ this.name)
     }
     this.isMale = function (sex){
-        if(this.sex == 'male'){
+        if(this.sex === 'male'){
             return true;
-        } else if(this.sex == 'female'){
+        } else if(this.sex === 'female'){
             return false;
         }
     }
-    this.setGender(){
+    this.setGender = function (sex){
         this.sex = sex;
     }
-    this.eat = function (){
+    this.eat = function (apple){
+        this.apple = apple;
         this.weightHuman = this.weightHuman + 1;
         this.apple.decrease()
     }
-    this.checkApple = function (){
-        return this.apple.getWeight();
+    this.checkApple = function (apple){
+        this.apple = apple;
+        this.apple.getWeight();
     }
     this.getName = function (){
         return this.name;
@@ -46,9 +48,9 @@ function Human(name, sex, weightHuman){
         this.name = this.name;
     }
     this.getWeight  = function (){
-        return this.weightHuman = weightHuman;
+        return this.weightHuman;
     }
-    this.setWeight = function (){
-        this.weightHuman = weightHuman;
+    this.setWeight = function (weight){
+        this.weightHuman=weight;
     }
 }
