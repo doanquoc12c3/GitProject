@@ -4,7 +4,7 @@ context = canvas.getContext('2d');
 make_base();
 
 function make_base()
-{
+{ 
   base_image = new Image();
   base_image.src = 'car.png';
   base_image.width = 100;

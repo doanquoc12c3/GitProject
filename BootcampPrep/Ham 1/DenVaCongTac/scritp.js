@@ -32,3 +32,4 @@ function ElectricLamp(status){
         return this.status = true;
     }
 }
+
