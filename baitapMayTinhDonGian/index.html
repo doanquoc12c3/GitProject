@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <script type='text/javascript' src="script.js"></script>
+    <style>
+        table{
+            width: 300px;
+            height: 400px;
+            font-size: xx-large;
+        }
+
+        button{
+            width: 60px;
+            height: 60px;
+            font-size: xx-large;
+        }
+        #display{
+            width: 250px;
+            height: 70px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<table style="border: 1px solid black; border-spacing: 1px" >
+    <tr >
+        <td id = 'display' colspan="4">0</td>
+
+    </tr>
+    <tr>
+        <td><button id="1" onClick="reply_click(this.id)">1</button></td>
+        <td><button id="2" onClick="reply_click(this.id)">2</button></td>
+        <td><button id="3" onClick="reply_click(this.id)">3</button></td>
+        <td><button id="+" onClick="reply_click(this.id)">+</button></td>
+    </tr>
+    <tr>
+        <td><button id="4" onClick="reply_click(this.id)">4</button></td>
+        <td><button id="5" onClick="reply_click(this.id)">5</button></td>
+        <td><button id="6" onClick="reply_click(this.id)">6</button></td>
+        <td><button id="-" onClick="reply_click(this.id)">-</button></td>
+    </tr>
+    <tr>
+        <td><button id="7" onClick="reply_click(this.id)">7</button></td>
+        <td><button id="8" onClick="reply_click(this.id)">8</button></td>
+        <td><button id="9" onClick="reply_click(this.id)">9</button></td>
+        <td><button id="x" onClick="reply_click(this.id)">x</button></td>
+    </tr>
+    <tr>
+        <td><button id="C" onClick="reply_click(this.id)">C</button></td>
+        <td><button id="0" onClick="reply_click(this.id)">0</button></td>
+        <td><button id="=" onClick="reply_click(this.id)">=</button></td>
+        <td><button id="/" onClick="reply_click(this.id)">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
