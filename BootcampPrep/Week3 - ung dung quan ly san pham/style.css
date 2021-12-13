@@ -1,0 +1,40 @@
+#newProduct{
+    width: 500px;
+    height: 80px;
+    background-color: gray;
+}
+
+#newProductBox{
+    width: 400px;
+    height: 40px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+#addButton{
+    width: 80px;
+    height: 40px;
+    background-color: lightblue;
+}
+
+#productBoard{
+    width: 1000px;
+}
+.editButton{
+    width: 80px;
+    height: 80px;
+    background-color: #0b800d;
+}
+.deleteButton{
+    width: 100px;
+    height: 80px;
+    background-color: #0b800d;
+}
+
+#productBoard tr{
+    height: 80px;
+    background-color: gray;
+}
+#productBoard:nth-child(even) {
+    background-color: white;
+}

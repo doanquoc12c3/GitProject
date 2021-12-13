@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h3>Add new product</h3>
+<table id = 'newProduct'>
+    <tr>
+        <td >
+            <input id = 'newProductBox' type="text" placeholder="New Product">
+        </td>
+        <td>
+            <button id="addButton" onclick="addNewProduct()">Add</button>
+        </td>
+    </tr>
+</table>
+<br><br>
+<table id="productBoard">
+    <tr>
+        <td colspan="4">DISPLAY ALL PRODUCT</td>
+
+    </tr>
+    <tr>
+        <td colspan="3">Product Name</td>
+
+        <td id="productQuantity">1 Products</td>
+    </tr>
+    <tr>
+        <td>Iphone 13 Pro Max</td>
+        <td>
+            <button class="editButton" onclick="editProduct(this)">Edit</button>
+        </td>
+        <td>
+            <button class="deleteButton">Delete</button>
+        </td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
