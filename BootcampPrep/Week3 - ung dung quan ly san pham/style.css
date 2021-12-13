@@ -20,6 +20,9 @@
 #productBoard{
     width: 1000px;
 }
+#productBoard td{
+    width: 80px ;
+}
 .editButton{
     width: 80px;
     height: 80px;

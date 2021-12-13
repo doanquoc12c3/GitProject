@@ -1,16 +1,16 @@
 let newProduct = undefined;
-let productTable = undefined;
-let totalRows = undefined;
+let productTable = document.getElementById('productBoard'), rIndex;
+let totalRows = productTable.rows.length;
 let row = undefined;
 let cell1 = undefined;
 let cell2 = undefined;
 let cell3 = undefined;
 let cell4 = undefined;
-
+let rowPosition = undefined;
+document.getElementById('productBoard').rows[1].cell[3].innerHTML= 'new'
 
 function addNewProduct() {
-    productTable = document.getElementById('productBoard');
-    totalRows = document.getElementById('productBoard').rows.length;
+    totalRows = productTable.rows.length;
     newProduct = document.getElementById('newProductBox').value;
     row = productTable.insertRow(totalRows);
     cell1 = row.insertCell(0)
@@ -18,18 +18,37 @@ function addNewProduct() {
     cell3 = row.insertCell(2);
     cell4 = row.insertCell(3)
     cell1.innerHTML = newProduct;
-    cell2.innerHTML = "<button class='editButton' onclick='editProduct(this)'>Edit</button>"
-    cell3.innerHTML = "<button class='deleteButton'>Delete</button>"
+
+    cell2.innerHTML = "<button class='editButton' onclick='editProduct()'>Edit</button>"
+    cell3.innerHTML = "<button class='deleteButton' onclick='deleteProduct()'>Delete</button>"
 }
 
-function editProduct(rowInfo){
-    var editProductName = prompt('nhap vao ten muon chinh sua')
-    var rowPosition = rowInfo.rowIndex;
-    productTable.rows[rowPosition].cells[0].innerHTML = editProductName;
-    // for(i=0;i<totalRows;i++){
-    //     for(j=0;j<4;j++){
-    //         productTable.rows[i].cells[j].innerHTML =
-    //     }
-    // }
+function editProduct() {
+
+
+    for (var i = 1; i < productTable.rows.length; i++) {
+        productTable.rows[i].onclick = function () {
+            rIndex = this.rowIndex;
+            console.log(rIndex)
+        }
+    }
+    function changeName() {
+        var editProductName = prompt('nhap vao ten muon chinh sua');
+        productTable.rows[rIndex].cells[0].innerHTML = editProductName;
+    }
+    setTimeout(changeName, 100)
+
 }
 
+function deleteProduct(){
+    for (var i = 1; i < productTable.rows.length; i++) {
+        productTable.rows[i].onclick = function () {
+            rIndex = this.rowIndex;
+            console.log(rIndex)
+        }
+    }
+    function eraseRow() {
+        productTable.deleteRow(rIndex)
+    }
+    setTimeout(eraseRow, 100)
+}
