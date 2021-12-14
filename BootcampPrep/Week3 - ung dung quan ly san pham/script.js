@@ -7,7 +7,7 @@ let cell2 = undefined;
 let cell3 = undefined;
 let cell4 = undefined;
 let rowPosition = undefined;
-document.getElementById('productBoard').rows[1].cell[3].innerHTML= 'new'
+document.getElementById('productBoard').rows[1].cells[1].innerHTML= (productTable.rows.length-2) + " products"
 
 function addNewProduct() {
     totalRows = productTable.rows.length;
@@ -21,6 +21,7 @@ function addNewProduct() {
 
     cell2.innerHTML = "<button class='editButton' onclick='editProduct()'>Edit</button>"
     cell3.innerHTML = "<button class='deleteButton' onclick='deleteProduct()'>Delete</button>"
+    document.getElementById('productBoard').rows[1].cells[1].innerHTML= (productTable.rows.length-2) + " products"
 }
 
 function editProduct() {
