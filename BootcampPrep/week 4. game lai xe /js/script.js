@@ -56,19 +56,60 @@ function Ninja(){
         };
         image.src = './images/' + this.image;
     }
+
+}
+
+function Obstacle(){
+    this.xCordinate = Math.floor(Math.random()*GAMEBOARD_WIDTH);
+    this.yCordinate = Math.floor(Math.random()*GAMEBOARD_HEIGHT);
+    this.showObs= function (ctx){
+        var obs = new Image();
+        var xCor = this.xCordinate;
+        var yCor = this.yCordinate;
+        obs.onload = function (){
+            ctx.drawImage(obs,xCor,yCor,60,60);
+        }
+        obs.src = './images/obstacle.png'
+    }
+}
+
+function Award(){
+    this.xAward = Math.floor(Math.random()*GAMEBOARD_WIDTH);
+    this.yAward = Math.floor(Math.random()*GAMEBOARD_HEIGHT);
+    this.showAward = function (ctx){
+        var award = new Image();
+        var x = this.xAward;
+        var y = this.yAward;
+        award.onload=function (){
+            ctx.drawImage(award,x,y,60,60);
+        }
+        award.src = './images/award.png';
+
+
+    }
+
 }
 
 function GameBoard() {
+    this.award1 = new Award();
+    this.obs1 = new Obstacle();
+    this.obstacle = new Obstacle();
     this.ninja = new Ninja();
     this.ctx = undefined;
     this.start = function(){
         this.ctx = document.getElementById('gameCanvas').getContext('2d');
         this.ninja.show(this.ctx);
+        this.obstacle.showObs(this.ctx);
+        this.obs1.showObs(this.ctx);
+        this.award1.showAward(this.ctx);
     };
 
     this.render = function(){
         this.ctx.clearRect(0, 0, GAMEBOARD_WIDTH, GAMEBOARD_HEIGHT);
         this.ninja.show(this.ctx);
+        this.obstacle.showObs(this.ctx);
+        this.obs1.showObs(this.ctx)
+        this.award1.showAward(this.ctx);
     };
 
     this.moveNinja = function(event){
@@ -87,6 +128,17 @@ function GameBoard() {
                 orientation = ORIENTATION_DOWN;
                 break;
         }
+        if(this.ninja.xPosition+80> this.obstacle.xCordinate && this.obstacle.xCordinate > this.ninja.xPosition && this.ninja.yPosition+80>this.obstacle.yCordinate && this.obstacle.yCordinate> this.ninja.yPosition){
+            alert('you lose');
+
+        }
+        if(this.ninja.xPosition+80> this.obs1.xCordinate && this.obs1.xCordinate > this.ninja.xPosition && this.ninja.yPosition+80>this.obs1.yCordinate && this.obs1.yCordinate> this.ninja.yPosition){
+            alert('you lose');
+
+        }
+        if(this.ninja.xPosition+20> this.award1.xAward && this.award1.xAward > this.ninja.xPosition && this.ninja.yPosition+20>this.award1.yAward && this.award1.yAward> this.ninja.yPosition){
+            alert('you win');
+        }
 
         if(orientation){
             if(this.ninja.orientation !== orientation){
@@ -95,6 +147,7 @@ function GameBoard() {
                 this.ninja.move();
             }
             this.render();
+            console.log('ninja : '+ this.ninja.xPosition + '\n'+'obs: '+ this.obstacle.xCordinate)
         }
     }
 }
